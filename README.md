@@ -4,12 +4,39 @@ A Rehype plugin to allow MDX to apply its component substitution to HTML tags in
 
 ## Example Usage
 
+Using node:
 ```js
 import { promises as fs } from 'node:fs'
 import { compile } from '@mdx-js/mdx'
 import mdxParseHtml from '@kebian/rehype-mdx-parse-html'
 
 console.log(String(await compile(await fs.readFile('example.mdx'), { rehypePlugins: [mdxParseHtml] })))
+```
+
+Using Next.js:
+
+```js
+// next.config.mjs
+
+import mdxParseHtml from '@kebian/rehype-mdx-parse-html'
+import mdx from '@next/mdx'
+
+const withMDX = mdx({
+  extension: /\.mdx?$/,
+  options: {
+    rehypePlugins: [mdxParseHtml]
+  }
+})
+
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  experimental: {
+    appDir: true,
+  },
+  pageExtensions: ['ts', 'tsx', 'js', 'jsx', 'md', 'mdx'],
+}
+
+export default withMDX(nextConfig)
 ```
 
 ## Background
