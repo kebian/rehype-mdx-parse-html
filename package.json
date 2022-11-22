@@ -1,6 +1,6 @@
 {
     "name": "@kebian/rehype-mdx-parse-html",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "description": "Allows MDX to apply its component substitution to html tags in markdown files.",
     "main": "dist/index.js",
     "types": "dist/index.d.ts",
@@ -8,6 +8,7 @@
     "prettier": "@adarna/prettier-config",
     "scripts": {
         "build": "tsc -p .",
+        "prepack": "npm run build",
         "test": "echo \"TODO: write some tests\" && exit 0"
     },
     "author": "Rob Stiles",
