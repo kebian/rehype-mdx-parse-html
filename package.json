@@ -12,6 +12,7 @@
     },
     "author": "Rob Stiles",
     "license": "MIT",
+    "private": false,
     "repository": {
         "type": "git",
         "url": "git+https://github.com/kebian/rehype-mdx-parse-html.git"
