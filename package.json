@@ -1,6 +1,6 @@
 {
     "name": "@kebian/rehype-mdx-parse-html",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "Allows MDX to apply its component substitution to html tags in markdown files.",
     "main": "dist/index.js",
     "types": "dist/index.d.ts",
